@@ -2,7 +2,7 @@ const { RichEmbed } = require('discord.js');
 
 module.exports = {
     name: "ban",
-    alias: ["b"],
+    alias: [],
     description: "Bans the user specified.",
     permission: "BAN_MEMBERS",
     run: async (client, msg, args) => {
