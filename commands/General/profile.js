@@ -22,7 +22,7 @@ module.exports = {
             .addField('Currency', m.cash, true)
             .addField('Experience', m.xp, true)
             .addField('Reputation', m.rep, false)
-            .addField('Spouse', m.spouse || "None")
+            .addField('Spouse', m.spouse ? client.fetchUser(m.spouse).tag : "None")
             .setTimestamp()
             .setFooter(client.user.username, client.user.avatarURL);
 
