@@ -45,7 +45,7 @@ module.exports = {
 
         if (member.highestRole.position >= mod.highestRole.position && mod !== msg.guild.owner) return msg.reply('you can\'t ban people with higher roles than you.');
         await member.ban({ reason:reason }).then(async ()=>{
-            await msg.reply(`successfully banned ${member} because ${reason}`);
+            await msg.reply(`successfully banned ${member} because ${reason || "no reason specified."}`);
         }).catch(err => {
             if (err) return msg.reply(`I could not ban that person please check my permissions`);
         });

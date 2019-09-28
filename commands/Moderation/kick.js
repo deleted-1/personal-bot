@@ -45,7 +45,7 @@ module.exports = {
 
         if (member.highestRole.position >= mod.highestRole.position && mod !== msg.guild.owner) return msg.reply('you can\'t kick people with higher roles than you.');
         await member.kick({ reason:reason }).then(async ()=>{
-            await msg.reply(`successfully kicked ${member} because ${reason}`);
+            await msg.reply(`successfully kicked ${member} because ${reason || "no reason specified."}`);
         }).catch(err => {
             if (err) return msg.reply(`I could not kick that person please check my permissions`);
         });
