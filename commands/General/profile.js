@@ -15,6 +15,8 @@ module.exports = {
 
         if (!m) return channel.send('Could not find that user.');
 
+        const user = await client.fetchUser(m.spouse);
+
         const embed = new RichEmbed()
             .setAuthor(client.users.get(mentions.members.first().id).username,client.users.get(mentions.members.first().id).avatarURL)
             .setTitle('Profile')
@@ -22,7 +24,7 @@ module.exports = {
             .addField('Currency', m.cash, true)
             .addField('Experience', m.xp, true)
             .addField('Reputation', m.rep, false)
-            .addField('Spouse', m.spouse ? client.fetchUser(m.spouse).tag : "None")
+            .addField('Spouse', m.spouse ? user.tag : "None")
             .setTimestamp()
             .setFooter(client.user.username, client.user.avatarURL);
 
