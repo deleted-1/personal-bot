@@ -18,7 +18,9 @@ module.exports = {
             await client.channels.get("624776867722821642").send(embed);
 
             if (joinedTimestamp-user.createdAt < Number("8.64e+7"))
-                setTimeout(()=> await member.addRole("627316248400625687"), Number("8.64e+7"));
+                setTimeout(() => {
+                    await member.addRole("627316248400625687")}
+                ,Number("8.64e+7"));
             else
                 await member.addRole("627316248400625687");
         }
