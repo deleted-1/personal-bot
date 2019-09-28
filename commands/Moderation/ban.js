@@ -15,6 +15,8 @@ module.exports = {
 
         if (!member){
 
+
+            
             const filter = m => m.author == msg.author && parseInt(m.content) < 6 && parseInt(m.content) > 0
             let members = msg.guild.members.filter(m => m.user.username.toLowerCase().includes(args[0].toLowerCase()));
             if(!members.size) return msg.reply('please specify a valid server member.');
