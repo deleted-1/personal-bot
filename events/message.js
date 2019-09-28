@@ -1,6 +1,8 @@
 const { prefix } = require('../config.json');
 
-module.exports = async (client, msg) => {
+module.exports = {
+    name: "message",
+    run: async (client, msg) => {
 
     const msgArray = msg.content.split(" ");
     const args = msgArray.slice(1);
@@ -13,5 +15,5 @@ module.exports = async (client, msg) => {
     if (!msg.member.permissions.has(cmd.permission)) return;
 
     cmd.run(client,msg,args);
-
+    }
 }
