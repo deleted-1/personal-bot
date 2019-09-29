@@ -15,7 +15,7 @@ module.exports = {
                 .addField("Status",author.presence.status,true)
                 .addField("Original Message",oldContent)
                 .addField("Current Message",newContent)
-                .addField("Message",`[!jump](${url})`)
+                .addField("Message",`[Jump](${url})`)
                 .setColor("LIGHT_GREY")
                 .setTimestamp();
             
