@@ -7,7 +7,7 @@ module.exports = {
         const {guild, user, joinedTimestamp} = member;
         if (guild.id == "623752428289785856") {
             const embed = new RichEmbed()
-                .setAuthor(user.username, user.avatarURL)
+                .setAuthor(user.tag, user.avatarURL)
                 .setTitle("Member Join")
                 .setThumbnail(user.avatarURL)
                 .addField("ID",user.id,true)
