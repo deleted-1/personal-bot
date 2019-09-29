@@ -13,6 +13,7 @@ module.exports = {
                 .addField("ID",user.id,true)
                 .addField("Status",user.presence.status,true)
                 .addField("Account Created",user.createdAt)
+                .setColor("BLUE")
                 .setTimestamp();
             
             await client.channels.get("624776867722821642").send(embed);

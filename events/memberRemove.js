@@ -1,3 +1,5 @@
+const { RichEmbed } = require('discord.js');
+
 module.exports = {
     name: "guildMemberRemove",
     run: async (client, member) => {
@@ -11,6 +13,7 @@ module.exports = {
                 .addField("ID",user.id,true)
                 .addField("Status",user.presence.status,true)
                 .addField("Account Created",user.createdAt)
+                .setColor("RED")
                 .setTimestamp();
             
             await client.channels.get("624776867722821642").send(embed);
