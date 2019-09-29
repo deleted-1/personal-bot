@@ -9,7 +9,7 @@ module.exports = {
         if (guild.id == "623752428289785856") {
             const embed = new RichEmbed()
                 .setAuthor(author.tag, author.avatarURL)
-                .setTitle("Message Delete")
+                .setTitle("Message Update")
                 .setThumbnail(author.avatarURL)
                 .addField("ID",author.id,true)
                 .addField("Status",author.presence.status,true)
