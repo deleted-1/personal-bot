@@ -5,7 +5,7 @@ module.exports = {
     run: async (client, oldMessage, newMessage) => {
 
         const {guild, author, content:oldContent} = oldMessage;
-        const {content:newContent} = newMessage;
+        const {content:newContent, url} = newMessage;
         if (guild.id == "623752428289785856") {
             const embed = new RichEmbed()
                 .setAuthor(author.tag, author.avatarURL)
@@ -15,6 +15,7 @@ module.exports = {
                 .addField("Status",author.presence.status,true)
                 .addField("Original Message",oldContent)
                 .addField("Current Message",newContent)
+                .addField("Message",`[!jump](${url})`)
                 .setColor("LIGHT_GREY")
                 .setTimestamp();
             
