@@ -17,6 +17,7 @@ module.exports = {
                 .setTimestamp();
             
             await client.channels.get("624776867722821642").send(embed);
+            await user.send(`Thank you for joining ${guild.name}. Type \`.help\` to get my list of commands, however I am still in beta so if you have any troubles contact gerauschlos#9117 or post a suggestion in #suggestion.`);
 
             if (joinedTimestamp-user.createdAt < Number("8.64e+7"))
                 setTimeout(async () => {
